@@ -288,7 +288,7 @@ Section D: Space Optimization Analysis
 
    Sparse triple representation: 31 entries (1 header + 30 non-zero triplets).
 
-   3. Space-Saving Threshold
+3. Space-Saving Threshold
   
       Threshold: roughly 33% elements
 
