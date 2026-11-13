@@ -87,38 +87,57 @@ Logic:This program initializes a 2D array (list of lists) from validated user in
 Sample Output:
 
 Enter number of rows: 2
+
 Enter number of columns: 3
+
 Enter 3 space-separated elements for row 0: 1 2 3
+
 Enter 3 space-separated elements for row 1: 4 5 6
 
 Initial 2D Array:
+
 [1, 2, 3]
+
 [4, 5, 6]
 
 Enter row position (index) to insert at: 2
+
 Enter 3 space-separated elements for the new row: 7 8 9
 
 2D Array after inserting row at index 2:
+
 [1, 2, 3]
+
 [4, 5, 6]
+
 [7, 8, 9]
 
 Enter row position (index) to delete: 5
 
 Invalid row position for deletion.
+
 [1, 2, 3]
+
 [4, 5, 6]
+
 [7, 8, 9]
 
 Enter value to search in the 2D array: 5
 
 Value 5 found at Row 1, Column 1.
+
 Current 2D Array:
+
 [1, 2, 3]
+
 [4, 5, 6]
+
 [7, 8, 9]
 
 2D Array after rotating 90 degrees clockwise:
+
 [7, 4, 1]
+
 [8, 5, 2]
+
 [9, 6, 3]
