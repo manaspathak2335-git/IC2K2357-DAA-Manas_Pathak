@@ -265,3 +265,37 @@ Result of Addition (Reconstructed Full 2D Form):
 [2, 0, 1]
 
 [0, 2, 0]
+
+Section D: Space Optimization Analysis
+
+1. Space Used by Representations
+  
+   Full 2D representation: O(mXn) to store all entries across m rows and n columns.
+
+   Sparse triple representation: O(k) to store only the k non-zero triplets plus one header entry.
+
+2. Actual Element Counts (Test Results)
+  
+   Matrix A (6X6 with 80% zeroes i.e 7 non-zero elements):
+
+   Full 2D representation: 36 elements (6X6).
+
+   Sparse triple representation: 8 entries (1 header + 7 non-zero triplets).
+
+   Matrix B (6X6 with < 20% zeroes i.e 30 non-zero elements):
+
+   Full 2D representation: 36 elements (6X6).
+
+   Sparse triple representation: 31 entries (1 header + 30 non-zero triplets).
+
+   3. Space-Saving Threshold
+  
+      Threshold: roughly 33% elements
+
+      Reasoning: Each triplet entry in a sparse representation stores 3 values (row, col, value), whereas a full representation stores 1 value per position. If the number of non-zero elements $k$ exceeds one-third of the total elements (mXn), storing 3 integers per non-zero element requires more data than the single grid slots of the full matrix.
+
+ 4. Real-World Sparse Matrix Situation
+    
+Example: Web Search Engine Term-Document Matrices.
+
+Why most entries are zero: Most web pages (documents) contain only a tiny fraction of the hundreds of thousands of words (terms) available in a global vocabulary, resulting in mostly zero entries for unmentioned words.
