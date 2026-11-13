@@ -141,3 +141,127 @@ Current 2D Array:
 [8, 5, 2]
 
 [9, 6, 3]
+
+Program-3: Sparse Matrix Operations
+
+Aim: Write a program that: 
+
+● Converts a full 2D matrix (list of lists) into its sparse triple representation 
+
+● Reconstructs the full matrix back from a sparse triple representation 
+
+● Adds two matrices while both are in sparse form, producing a result that is also in sparse form, without converting either input back to a full matrix first 
+
+● Displays both the sparse form and the reconstructed full form, so the two can be compared 
+
+Logic:This program takes user input to create two 2D matrices, converts them into 3-tuple sparse triple representations, and reconstructs them back into full matrices. It then performs direct addition on the matrices while they are still in sparse form using a two-pointer merge technique, displaying both the sparse and reconstructed full results for comparison.
+
+Sample Output:
+
+--- Enter details for Matrix 1 ---
+
+Enter number of rows for Matrix 1: 3
+
+Enter number of columns for Matrix 1: 3
+
+Enter 3 space-separated elements for row 0: 1 0 0
+
+Enter 3 space-separated elements for row 1: 3 0 2
+
+Enter 3 space-separated elements for row 2: 0 2 0
+
+Full 2D Form of Matrix 1:
+
+[1, 0, 0]
+
+[3, 0, 2]
+
+[0, 2, 0]
+
+Sparse Triple Representation of Matrix 1:
+
+Row	Col	Value
+
+----------------------
+
+3	3	4  <-- (Header: Total Rows, Cols, Non-Zero Count)
+
+0	0	1
+
+1	0	3
+
+1	2	2
+
+2	1	2
+
+Reconstructed Full 2D Form of Matrix 1 (from Sparse):
+
+[1, 0, 0]
+
+[3, 0, 2]
+
+[0, 2, 0]
+
+--- Enter Second Matrix for Sparse Addition ---
+
+--- Enter details for Matrix 2 ---
+
+Enter number of rows for Matrix 2: 3
+
+Enter number of columns for Matrix 2: 3
+
+Enter 3 space-separated elements for row 0: 1 0 1
+
+Enter 3 space-separated elements for row 1: -1 0 -1
+
+Enter 3 space-separated elements for row 2: 0 0 0
+
+Full 2D Form of Matrix 2:
+
+[1, 0, 1]
+
+[-1, 0, -1]
+
+[0, 0, 0]
+
+Sparse Representation of Matrix 2:
+
+Row	Col	Value
+
+----------------------
+
+3	3	4  <-- (Header: Total Rows, Cols, Non-Zero Count)
+
+0	0	1
+
+0	2	1
+
+1	0	-1
+
+1	2	-1
+
+Result of Addition (Sparse Triple Form):
+
+Row	Col	Value
+
+----------------------
+
+3	3	5  <-- (Header: Total Rows, Cols, Non-Zero Count)
+
+0	0	2
+
+0	2	1
+
+1	0	2
+
+1	2	1
+
+2	1	2
+
+Result of Addition (Reconstructed Full 2D Form):
+
+[2, 0, 1]
+
+[2, 0, 1]
+
+[0, 2, 0]
