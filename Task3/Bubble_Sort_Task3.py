@@ -1,14 +1,4 @@
 Input=[8,3,15,6,2]
-comparisions=0 
-largest=Input[0]
-
-for n in Input[1:]:
-    if n>largest:
-        largest=n
-    comparisions+=1
-    
-print("Lagrest Number:", largest)
-print("Comparisions Made:", comparisions)
 
 i=len(Input)
 while(i>1):
