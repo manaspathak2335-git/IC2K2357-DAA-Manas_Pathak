@@ -1,11 +1,17 @@
-Input=[8,3,15,6,2]
+#Program to implement Bubble Sort
 
-i=len(Input)
+def input_array():
+    arr = [int(x) for x in input("Enter array elements separated by spaces: ").split()]
+    print(f"Input Array: {arr}\n")
+    return arr
+
+arr=input_array()
+i=len(arr)
 while(i>1):
     swapped=False
     for n in range(0,i-1):
-        if Input[n] > Input[n+1]:
-            Input[n],Input[n+1]=Input[n+1],Input[n]
+        if arr[n] > arr[n+1]:
+            arr[n],arr[n+1]=arr[n+1],arr[n]
             swapped=True
     if not swapped:
         break
